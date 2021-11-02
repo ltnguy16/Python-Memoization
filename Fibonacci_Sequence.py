@@ -9,5 +9,5 @@ def fib(value, memo):
     memo[value] = fib(value - 1, memo) + fib(value - 2, memo)
   return memo[value]
 
-value = 199
+value = 14
 print(fib(value, dict()))
