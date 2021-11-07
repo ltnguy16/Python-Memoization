@@ -1,6 +1,6 @@
 #Grid Traveler. return how many way can be travel through a grid by just moving right or down
 
-def gridTraveler(x, y, memo):
+def grid_traveler(x, y, memo):
   key = str(x) + ',' + str(y)
   if key in memo: 
     return memo[key]
@@ -8,7 +8,7 @@ def gridTraveler(x, y, memo):
     return 1
   if x == 0 or y == 0:
     return 0
-  memo[key] = gridTraveler(x - 1, y, memo) + gridTraveler(x, y - 1, memo)
+  memo[key] = grid_traveler(x - 1, y, memo) + grid_traveler(x, y - 1, memo)
   return memo[key]
 
-print(gridTraveler(18,18, dict()))
+print(grid_traveler(18,18, dict()))
