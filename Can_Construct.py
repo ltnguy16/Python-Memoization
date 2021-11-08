@@ -5,7 +5,7 @@ def can_construct(target, wordBank, memo):
   if target == "":
     return True
   for word in wordBank:
-    if word in target[0:len(word)]:
+    if target.startswith(word):
       if can_construct(target[len(word):], wordBank, memo) == True:
         memo[target] = True
         return memo[target]
